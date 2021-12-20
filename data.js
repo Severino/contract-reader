@@ -1,6 +1,3 @@
-const ETHERSCAN_API_KEY = 'H9Q2BDA55J85PISTNG8BDM5IKD4MGTUVW4';
-const ALCHEMY_API_KEY = 'FY6BwiO9_hzVN4N2Fx8Ti-BeukyI2XiM';
-
 const _web3Instance = {};
 let _contractInstance;
 
@@ -19,7 +16,6 @@ async function dataFetchAbi(contractAddress, network) {
   const abiReq = await fetch(
     `https://ctrver.t.hmny.io/fetchContractCode?contractAddress=${bech32Address}`
   );
-    console.log("HASDASD")
 
   if (abiReq.status === 200) {
     let json = await abiReq.json()
